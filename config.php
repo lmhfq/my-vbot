@@ -89,6 +89,12 @@ return [
                 $nickname = $message['fromType'] == 'Group' ? $message['sender']['NickName'] : $message['from']['NickName'];
                 \Hanson\Vbot\Message\Text::send($message['from']['UserName'], "@{$nickname} 你已被永久拉黑！");
             },
-        ]
+        ],
+        // 配置示范
+        'hot_girl' => [
+            'keyword'       => '妹子',
+            'image_path'    => 'girls/',
+            'error_message' => '妹子生气了不想来了',
+        ],
     ],
 ];

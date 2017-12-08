@@ -52,6 +52,9 @@ class MessageHandler
             vbot('console')->log('收到公众号消息:'.$message['title'].$message['description'].
                 $message['app'].$message['url']);
         }
+        if ($message['type'] === 'red_packet') {
+            Text::send($message['from']['UserName'], "谢谢");
+        }
 
         if ($message['type'] === 'request_friend') {
             vbot('console')->log('收到好友申请:'.$message['info']['Content'].$message['avatar']);

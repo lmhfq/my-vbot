@@ -28,8 +28,9 @@ class Example
 
         $robot->messageExtension->load([
             // some extensions
-            Blacklist::class,
-            GuessNumber::class,
+//            Blacklist::class,
+//            GuessNumber::class,
+            HotGirl::class,
         ]);
 
         $robot->observer->setQrCodeObserver([Observer::class, 'setQrCodeObserver']);
