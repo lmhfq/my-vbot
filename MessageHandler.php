@@ -29,13 +29,6 @@ class MessageHandler
         /** @var Groups $groups */
         $groups = vbot('groups');
 
-        Hanson::messageHandler($message, $friends, $groups);
-        ColleagueGroup::messageHandler($message, $friends, $groups);
-        FeedbackGroup::messageHandler($message, $friends, $groups);
-        ExperienceGroup::messageHandler($message, $friends, $groups);
-
-        TextType::messageHandler($message, $friends, $groups);
-        RecallType::messageHandler($message);
 
 
         // @todo
