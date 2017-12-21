@@ -101,7 +101,7 @@ return [
         'tuling' => [
             'status'        => true,
             'key'           => '31e2c7b415a347bfb19fb57dc5f0566b',
-            'error_message' => '图灵机器人失灵了，暂时没法陪聊了，T_T！',
+            'error_message' => '机器人失灵了，暂时没法陪聊了，T_T！',
         ],
     ],
 ];
