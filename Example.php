@@ -6,6 +6,7 @@ use Hanson\Vbot\Foundation\Vbot as Bot;
 use Vbot\Blacklist\Blacklist;
 use Vbot\GuessNumber\GuessNumber;
 use Vbot\HotGirl\HotGirl;
+use Vbot\Tuling\Tuling;
 
 class Example
 {
@@ -30,7 +31,8 @@ class Example
             // some extensions
 //            Blacklist::class,
 //            GuessNumber::class,
-            HotGirl::class,
+          //  HotGirl::class,
+            Tuling::class
         ]);
 
         $robot->observer->setQrCodeObserver([Observer::class, 'setQrCodeObserver']);

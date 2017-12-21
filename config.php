@@ -92,9 +92,16 @@ return [
         ],
         // 配置示范
         'hot_girl' => [
-            'keyword'       => '妹子',
+            'keyword'       => '美女',
             'image_path'    => $path.'girls/',
             'error_message' => '妹子生气了不想来了',
+        ],
+
+        // 配置示范
+        'tuling' => [
+            'status'        => true,
+            'key'           => '31e2c7b415a347bfb19fb57dc5f0566b',
+            'error_message' => '图灵机器人失灵了，暂时没法陪聊了，T_T！',
         ],
     ],
 ];
