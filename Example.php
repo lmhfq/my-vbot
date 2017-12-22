@@ -7,7 +7,7 @@ use Vbot\Blacklist\Blacklist;
 use Vbot\GuessNumber\GuessNumber;
 use Vbot\HotGirl\HotGirl;
 use Vbot\Tuling\Tuling;
-
+date_default_timezone_set('PRC');
 class Example
 {
     private $config;
