@@ -38,7 +38,7 @@ class Example
         });
         $robot->messageExtension->load([
             // some extensions
-           // Tuling::class
+            Tuling::class
         ]);
 
         $robot->observer->setQrCodeObserver([Observer::class, 'setQrCodeObserver']);
