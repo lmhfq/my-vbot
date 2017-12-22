@@ -14,7 +14,7 @@ class Example
 
     public function __construct($session = null)
     {
-        $this->config = require_once __DIR__.'/config.php';
+        $this->config = require_once __DIR__ . '/config.php';
 
         if ($session) {
             $this->config['session'] = $session;
@@ -24,15 +24,21 @@ class Example
     public function run()
     {
         $robot = new Bot($this->config);
+        // 获取消息处理器实例
+        $messageHandler = $robot->messageHandler;
 
-        $robot->messageHandler->setHandler([MessageHandler::class, 'messageHandler']);
+        // 收到消息时触发
+        $messageHandler->setHandler([MessageHandler::class, 'messageHandler']);
 
+        // 一直触发
+        $messageHandler->setCustomHandler(function () {
+            if (date('H') == 12) {
+                Text::send('filehelper', '现在时间 12 点');
+            }
+        });
         $robot->messageExtension->load([
             // some extensions
-//            Blacklist::class,
-//            GuessNumber::class,
-          //  HotGirl::class,
-            Tuling::class
+           // Tuling::class
         ]);
 
         $robot->observer->setQrCodeObserver([Observer::class, 'setQrCodeObserver']);

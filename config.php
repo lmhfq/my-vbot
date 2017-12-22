@@ -75,27 +75,27 @@ return [
         // 管理员配置（必选），优先加载 remark_name
         'admin' => [
             'remark'   => '',
-            'nickname' => 'HanSon',
+            'nickname' => 'LMF',
         ],
-        'blacklist' => [
-            'type' => [
-                'text', 'emoticon'
-            ],
-            'warn' => function ($message) {
-                $nickname = $message['fromType'] == 'Group' ? $message['sender']['NickName'] : $message['from']['NickName'];
-                \Hanson\Vbot\Message\Text::send($message['from']['UserName'], "@{$nickname} 警告！你的消息频率略高！");
-            },
-            'block' => function ($message) {
-                $nickname = $message['fromType'] == 'Group' ? $message['sender']['NickName'] : $message['from']['NickName'];
-                \Hanson\Vbot\Message\Text::send($message['from']['UserName'], "@{$nickname} 你已被永久拉黑！");
-            },
-        ],
-        // 配置示范
-        'hot_girl' => [
-            'keyword'       => '美女',
-            'image_path'    => $path.'girls/',
-            'error_message' => '妹子生气了不想来了',
-        ],
+//        'blacklist' => [
+//            'type' => [
+//                'text', 'emoticon'
+//            ],
+//            'warn' => function ($message) {
+//                $nickname = $message['fromType'] == 'Group' ? $message['sender']['NickName'] : $message['from']['NickName'];
+//                \Hanson\Vbot\Message\Text::send($message['from']['UserName'], "@{$nickname} 警告！你的消息频率略高！");
+//            },
+//            'block' => function ($message) {
+//                $nickname = $message['fromType'] == 'Group' ? $message['sender']['NickName'] : $message['from']['NickName'];
+//                \Hanson\Vbot\Message\Text::send($message['from']['UserName'], "@{$nickname} 你已被永久拉黑！");
+//            },
+//        ],
+//        // 配置示范
+//        'hot_girl' => [
+//            'keyword'       => '哈哈',
+//            'image_path'    => $path.'girls/',
+//            'error_message' => '生气了不想来了',
+//        ],
 
         // 配置示范
         'tuling' => [
